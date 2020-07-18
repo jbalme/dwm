@@ -101,6 +101,11 @@ static Key keys[] = {
 	TAGKEYS(                        XK_8,                      7)
 	TAGKEYS(                        XK_9,                      8)
 	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
+	/* Windows-style binds */
+	{ Mod1Mask,                     XK_Tab,      focusstack,     {.i = +1 } },
+	{ Mod1Mask|ShiftMask,           XK_Tab,      focusstack,     {.i = -1 } },
+	{ Mod1Mask,                     XK_F2,	     spawn,          {.v = dmenucmd } },
+	{ Mod1Mask,                     XK_F4,       killclient,     {0}},
 };
 
 /* button definitions */
