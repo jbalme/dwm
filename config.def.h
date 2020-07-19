@@ -110,7 +110,7 @@ static Key keys[] = {
 	{ Mod1Mask|ShiftMask,           XK_Tab,      focusstack,     {.i = -1 } },
 	{ Mod1Mask,                     XK_F2,	     spawn,          {.v = dmenucmd } },
 	{ Mod1Mask,                     XK_F4,       killclient,     {0}},
-	{ ControlMask|ShiftMask,        XK_Esc,	     spawn,		     {.v = topcmd} },
+	{ ControlMask|ShiftMask,        XK_Escape,   spawn,		     {.v = topcmd} },
 	{ Mod4Mask,                     XK_f,        spawn,          {.v = fmgrcmd} },
 };
 
