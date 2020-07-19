@@ -66,7 +66,6 @@ static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont,
 static const char *termcmd[]  = { "st", NULL };
 static const char *topcmd[]   = { "st", "-e", "htop", NULL };
 static const char *fmgrcmd[]  = { "nautilus", NULL };
-static const char *browsercmd = SHCMD("$BROWSER");
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -105,7 +104,7 @@ static Key keys[] = {
 	TAGKEYS(                        XK_9,                      8)
 	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
 
-	{ Mod4Mask,                     XK_w,        spawn,          {.v = browsercmd} },
+	{ Mod4Mask,                     XK_w,        spawn,          {.v = SHCMD("$BROWSER")} },
 	/* Windows-style binds */
 	{ Mod1Mask,                     XK_Tab,      focusstack,     {.i = +1 } },
 	{ Mod1Mask|ShiftMask,           XK_Tab,      focusstack,     {.i = -1 } },
