@@ -66,7 +66,7 @@ static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont,
 static const char *termcmd[]  = { "st", NULL };
 static const char *topcmd[]   = { "st", "-e", "htop", NULL };
 static const char *fmgrcmd[]  = { "nautilus", NULL };
-static const char *webcmd[] = { "firefox", NULL };
+static const char *webcmd[] = { "/bin/sh", "-c", "$BROWSER", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -110,6 +110,7 @@ static Key keys[] = {
 	{ Mod1Mask,                     XK_Tab,      focusstack,     {.i = +1 } },
 	{ Mod1Mask|ShiftMask,           XK_Tab,      focusstack,     {.i = -1 } },
 	{ Mod1Mask,                     XK_F2,	     spawn,          {.v = dmenucmd } },
+	{ Mod4Mask,                     XK_r,	     spawn,          {.v = dmenucmd } },
 	{ Mod1Mask,                     XK_F4,       killclient,     {0}},
 	{ ControlMask|ShiftMask,        XK_Escape,   spawn,		     {.v = topcmd} },
 	{ Mod4Mask,                     XK_f,        spawn,          {.v = fmgrcmd} },
